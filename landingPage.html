@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valt Health — Optimize Your Wellbeing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#ffffff;
+      --primary:#2563eb;
+      --secondary:#1e293b;
+      --muted:#6b7280;
+      --radius:14px;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--secondary);
+      display:flex;
+      justify-content:center;
+    }
+    .container{max-width:var(--max-width);width:100%}
+
+    /* Header */
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #e5e7eb;}
+    .logo{font-weight:700;font-size:20px;color:var(--primary)}
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{color:var(--secondary);text-decoration:none;font-weight:500;font-size:14px}
+    .cta{background:var(--primary);color:#fff;padding:10px 16px;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600}
+
+    /* Hero */
+    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 24px;}
+    .hero h1{font-size:42px;margin-bottom:20px;line-height:1.1}
+    .hero p{max-width:600px;color:var(--muted);margin-bottom:30px;font-size:18px}
+    .hero .actions{display:flex;gap:14px}
+    .hero .actions button{padding:12px 20px;border-radius:var(--radius);font-weight:600;cursor:pointer;border:none}
+    .primary{background:var(--primary);color:#fff}
+    .secondary{background:#f1f5f9;color:var(--secondary)}
+
+    /* Showcase */
+    .showcase{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 24px;align-items:center}
+    .showcase img{width:100%;border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+    .showcase-text h2{font-size:28px;margin-bottom:16px}
+    .showcase-text p{color:var(--muted);font-size:16px;line-height:1.6}
+
+    /* Features */
+    .features{background:#f9fafb;padding:60px 24px}
+    .features h2{text-align:center;margin-bottom:40px;font-size:30px}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+    .feature{background:#fff;padding:24px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+    .feature h3{margin:0 0 12px;font-size:20px}
+    .feature p{margin:0;color:var(--muted)}
+
+    /* Footer */
+    footer{padding:30px 24px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb}
+
+    @media(max-width:800px){
+      .showcase{grid-template-columns:1fr;}
+      .hero h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+   <header>
+  <div class="logo">Valt Health</div>
+  <nav>
+    <a href="features.html">Features</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button class="cta" onclick="window.location.href='signup.html'">Sign Up</button>
+  </nav>
+</header>
+
+    <section class="hero">
+      <h1>Track. Analyze. Improve.</h1>
+      <p>VALT Health is an early-stage health technology company based in the Bay Area, building a central platform for wearable and biometric data. Our mission is to empower organizations and individuals with meaningful, science-backed insights that improve health, performance, and productivity - without locking users into proprietary hardware.</p>
+      <div class="actions">
+        <button class="primary">Get Started</button>
+        <button class="secondary">Request Demo</button>
+      </div>
+    </section>
+
+    <section class="showcase" id="about">
+      <img src="valtwebhomepage.png" alt="Valt Health dashboard preview">
+      <div class="showcase-text">
+        <h2>Your Data, Simplified</h2>
+        <p>We integrate with Fitbit, Garmin, Apple Watch, and more to gather your health metrics in one place. Our platform highlights what matters most so you can focus on progress.</p>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h2>Why Choose Valt Health?</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Seamless Integration</h3>
+          <p>Connect your wearables in seconds and start receiving insights right away.</p>
+        </div>
+        <div class="feature">
+          <h3>Personalized Insights</h3>
+          <p>AI-powered recommendations tailored to your lifestyle and fitness goals.</p>
+        </div>
+        <div class="feature">
+          <h3>Data Privacy First</h3>
+          <p>Your information is encrypted and always under your control.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Valt Health. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
