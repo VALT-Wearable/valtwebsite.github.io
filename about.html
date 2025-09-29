@@ -5,7 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Valt Health — About</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg:#ffffff;
+      --primary:#2563eb;
+      --secondary:#1e293b;
+      --muted:#6b7280;
+      --radius:14px;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, sans-serif;
+      background:var(--bg);
+      color:var(--secondary);
+      display:flex;
+      justify-content:center;
+    }
+    .container{max-width:var(--max-width);width:100%}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #e5e7eb;}
+    .logo{font-weight:700;font-size:20px;color:var(--primary)}
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{color:var(--secondary);text-decoration:none;font-weight:500;font-size:14px}
+    .cta{background:var(--primary);color:#fff;padding:10px 16px;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600}
+    .showcase{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 24px;align-items:center}
+    .showcase img{width:100%;border-radius:var(--radius);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+    .showcase-text h2{font-size:28px;margin-bottom:16px}
+    .showcase-text p{color:var(--muted);font-size:16px;line-height:1.6}
+    footer{padding:30px 24px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb}
+    @media(max-width:800px){
+      .showcase{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -22,8 +54,10 @@
     <section class="showcase">
       <img src="valtwebhomepage.png" alt="Valt Health dashboard preview">
       <div class="showcase-text">
-        <h2>Your Data, Simplified</h2>
-        <p>We integrate with Fitbit, Garmin, Apple Watch, and more to gather your health metrics in one place. Our platform highlights what matters most so you can focus on progress.</p>
+        <h2>Who We Are</h2>
+        <p>Valt Health is a Bay Area–based startup focused on health data innovation. 
+        We believe technology should empower individuals, not restrict them. 
+        Our mission is to simplify health insights so you can live healthier, happier, and smarter.</p>
       </div>
     </section>
 
@@ -31,6 +65,7 @@
       © <span id="year"></span> Valt Health. All rights reserved.
     </footer>
   </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
