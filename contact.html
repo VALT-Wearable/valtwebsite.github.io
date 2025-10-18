@@ -14,8 +14,8 @@
       --radius:14px;
       --max-width:1200px;
     }
-    *{box-sizing:border-box;}
-    body{
+    * { box-sizing:border-box; }
+    body {
       margin:0;
       font-family:Inter, system-ui, sans-serif;
       background:var(--bg);
@@ -23,19 +23,66 @@
       display:flex;
       justify-content:center;
     }
-    .container{max-width:var(--max-width);width:100%}
-    header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #e5e7eb;}
-    .logo{font-weight:700;font-size:20px;color:var(--primary)}
-    nav{display:flex;gap:20px;align-items:center}
-    nav a{color:var(--secondary);text-decoration:none;font-weight:500;font-size:14px}
-    .cta{background:var(--primary);color:#fff;padding:10px 16px;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600}
-    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 24px;}
-    .hero h1{font-size:42px;margin-bottom:20px}
-    .hero p{max-width:600px;color:var(--muted);margin-bottom:30px;font-size:18px}
-    .primary{background:var(--primary);color:#fff;padding:12px 20px;border:none;border-radius:var(--radius);font-weight:600;cursor:pointer}
-    footer{padding:30px 24px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb}
-    @media(max-width:800px){
-      .hero h1{font-size:32px}
+    .container { max-width:var(--max-width); width:100%; }
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 24px;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .logo { font-weight:700; font-size:20px; color:var(--primary); }
+    nav { display:flex; gap:20px; align-items:center; }
+    nav a {
+      color:var(--secondary);
+      text-decoration:none;
+      font-weight:500;
+      font-size:14px;
+    }
+    .cta {
+      background:var(--primary);
+      color:#fff;
+      padding:10px 16px;
+      border:none;
+      border-radius:var(--radius);
+      cursor:pointer;
+      font-weight:600;
+    }
+    .hero {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding:60px 24px;
+    }
+    .hero h1 {
+      font-size:42px;
+      margin-bottom:20px;
+    }
+    .hero p {
+      max-width:600px;
+      color:var(--muted);
+      margin-bottom:30px;
+      font-size:18px;
+    }
+    iframe {
+      width:100%;
+      max-width:640px;
+      height:900px;
+      border:none;
+      border-radius:var(--radius);
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      padding:30px 24px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      border-top:1px solid #e5e7eb;
+    }
+    @media(max-width:800px) {
+      .hero h1 { font-size:32px; }
+      iframe { height:1000px; }
     }
   </style>
 </head>
@@ -54,12 +101,13 @@
     <section class="hero">
       <h1>Get in Touch</h1>
       <p>We’d love to hear from you! Reach out for questions, demos, or partnerships.</p>
-      <form style="max-width:500px;margin:0 auto;text-align:left;display:flex;flex-direction:column;gap:12px">
-        <input type="text" placeholder="Your Name" required style="padding:12px;border-radius:var(--radius);border:1px solid #ddd">
-        <input type="email" placeholder="Your Email" required style="padding:12px;border-radius:var(--radius);border:1px solid #ddd">
-        <textarea placeholder="Your Message" rows="5" required style="padding:12px;border-radius:var(--radius);border:1px solid #ddd"></textarea>
-        <button type="submit" class="primary">Send Message</button>
-      </form>
+
+      <!-- Embedded Google Form -->
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd36Gz4zbltcMtptEGmj3ydiGatVy4FgIM6fFO8Cni1L-rciA/viewform?embedded=true"
+        allowfullscreen>
+        Loading…
+      </iframe>
     </section>
 
     <footer>
